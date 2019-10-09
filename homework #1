@@ -9,3 +9,25 @@
 # Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31, 32, Fizz, 34, Buzz, Fizz, …
 
 # Напишите код, выводящий на экран первые n элементов этой игры (естественно, корректные).
+
+def fizz_buzz(n):
+    
+    numbers = list(range(1,n+1))
+    game_result = []
+    
+    for i in numbers:
+        if i % 3 == 0 and i % 5 == 0:
+            game_result.append('Fizz Buzz')
+        elif i % 3 == 0:
+            game_result.append('Fizz')
+        elif i % 5 == 0:
+            game_result.append('Buzz')
+        else:
+            game_result.append(i)
+    
+    print(game_result)
+
+
+fizz_buzz(36)
+
+
